@@ -294,5 +294,3 @@ arrowAdminPanel.addEventListener("click", () => {
 });
 resetGameButton.addEventListener("click", resetGame);
 showRolesButton.addEventListener("click", showAllRoles);
-
-//startGame(15, 2);

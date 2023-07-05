@@ -40,7 +40,7 @@ function buildJS(done) {
       })
     )
     .pipe(uglify())
-    .pipe(rename({ surfix: ".min" }))
+    .pipe(rename({ suffix: ".min" }))
     .pipe(dest(paths.jsDest));
   done();
 }
