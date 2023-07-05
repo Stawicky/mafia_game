@@ -1,0 +1,36 @@
+@import '_reset';
+@import '_modal-game-start';
+@import '_player';
+@import '_modal-player-options';
+@import '_modal-checking-question';
+@import '_admin-panel.scss';
+
+body {
+    color: aliceblue;
+    background-color: #27272c;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.hide{
+    display: none !important;
+ }
+ .board-game-border {
+  background: #355c7d;
+  background: linear-gradient(to right, #c06c84, #6c5b7b, #355c7d);
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ }
+.board-game {
+    overflow: hidden;
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+    border: 1px solid black;
+    display: flex;
+    background-color: #27272c;
+
+}
+

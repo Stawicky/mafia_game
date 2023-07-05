@@ -1,0 +1,57 @@
+.player {
+  width: 100px;
+  height: 100px;
+  background: rgb(51, 87, 118);
+  border: 1px solid black;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(120deg) translateY(-30vh);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 1;
+  transition: background-color 0.5s;
+  > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.16s ease-in-out;
+  }
+  .options,
+  .showClass,
+  .kill {
+    transition: background-color 0.3s;
+  }
+  .options:hover,
+  .showClass:hover,
+  .kill:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .options {
+    padding: 5px 0 0 5px;
+    border-radius: 50px 0 0 0;
+  }
+  .showClass {
+    padding: 0 0 5px 5px;
+    border-top: 1px solid black;
+    border-radius: 0 0 0 50px;
+  }
+  .kill {
+    border-left: 1px solid black;
+    padding-right: 5px;
+    grid-row: 1/3;
+    grid-column: 2/3;
+    border-radius: 0 50px 50px 0;
+  }
+  .name {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

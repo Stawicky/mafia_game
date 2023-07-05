@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mafia - internetowy panel do gry w mafie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/css/style.min.css" />
+    <script
+      src="https://kit.fontawesome.com/ea9b4b5917.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="modal-border">
+      <div class="modal-start-game">
+        <h1>Witaj w Mafii!</h1>
+        <label for="players-amount">Liczba graczy:</label>
+        <input id="players-amount" type="number" min="4" max="20" />
+        <label for="mafia-amount">Liczba mafii:</label>
+        <input id="mafia-amount" type="number" min="1" max="5" />
+        <legend for="extra-roles">Ekstra role:</legend>
+        <div class="extra-roles">
+          <label for="medic">Medyk</label>
+          <input type="checkbox" id="medic" name="medic" />
+          <label for="jester">Jester</label>
+          <input type="checkbox" id="jester" name="jester" />
+          <label for="sheriff">Szeryf</label>
+          <input type="checkbox" id="sheriff" name="sheriff" />
+          <label for="role4">role4</label>
+          <input type="checkbox" id="role4" name="role4" />
+        </div>
+        <button class="start">Start</button>
+      </div>
+    </div>
+   <div class="phone-alert">
+    <i class="fa-solid fa-mobile-screen">
+    </i>
+    <p>Phone version is not a avaible now.</p>
+   </div>
+    <div class="board-game-border hide">
+      <section class="board-game">
+        <div class="admin-panel">
+          
+          <div class="arrow-admin">
+            <div class="top-arrow-bar"></div>
+            <div class="bottom-arrow-bar"></div>
+          </div>
+          <button class="reset"><i class="fa-solid fa-power-off"></i></button>
+          <button class="show-all-roles"><i class="fa-solid fa-eye"></i></button>
+          <button class="undo"><i class="fa-solid fa-rotate-left"></i></button>
+          <button><i class="fa-solid fa-horse-head"></i></button>
+        </div>
+      </section>
+    </div>
+    <div class="modal-border-option hide">
+      <div class="modal-player-option">
+        <h2>Ustawienia</h2>
+        <label for="rename">Imie gracza:</label>
+        <input id="rename" type="text" maxlength="20" />
+        <label for="changeRole">Zmień role:</label>
+        <select id="changeRole">
+          <option value="" selected disabled></option>
+          <option value="police">Policja</option>
+          <option value="mafia">Mafia</option>
+          <option value="medic">Medyk</option>
+          <option value="jester">Jester</option>
+          <option value="sheriff">Szeryf</option>
+          <option value="role4">role4</option>
+        </select>
+        <button class="save">Zapisz</button>
+        <button class="cancel">Anuluj</button>
+      </div>
+    </div>
+    <div class="modal-border-checking-question hide">
+      <div class="modal-checking-question">
+        <p class="question">Czy jesteś pewny?</p>
+        <button class="yes">Tak</button>
+        <button class="no">Nie</button>
+      </div>
+    </div>
+
+    <script src="/src/js/app.js"></script>
+  </body>
+</html>

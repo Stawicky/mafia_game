@@ -1,0 +1,94 @@
+.admin-panel {
+  position: absolute;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  top: 50%;
+  right: -52px;
+  transform: translateY(-50%);
+  align-items: center;
+  column-gap: 5px;
+  row-gap: 10px;
+  transition: right 0.5s ease;
+
+  .arrow-admin {
+    font-size: 40px;
+    grid-row: 1/5;
+    transition: transform 0.5s ease-in;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .top-arrow-bar {
+    width: 2px;
+    height: 20px;
+    background: aliceblue;
+    transform: rotate(45deg) translateY(5px);
+    border-radius: 5px;
+    transition: transform 0.3s;
+  }
+  .bottom-arrow-bar {
+    width: 2px;
+    height: 20px;
+    background: aliceblue;
+    transform: rotate(-45deg) translateY(-5px);
+    border-radius: 5px;
+    transition: transform 0.3s;
+  }
+  .arrow-admin:hover {
+    animation: movearrowright infinite linear 1s;
+  }
+
+  button {
+    width: 50px;
+    height: 50px;
+    background: rgb(51, 87, 118);
+    border: 1px solid black;
+    border-radius: 50%;
+    color: aliceblue;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button:hover {
+    background-color: rgba(51, 87, 118, 0.4);
+  }
+}
+.open {
+  right: 10px !important;
+
+  .arrow-admin:hover {
+    animation: movearrowleft infinite linear 1s;
+  }
+  .arrow-admin .top-arrow-bar {
+    transform: rotate(-45deg) translateY(5px);
+  }
+  .arrow-admin .bottom-arrow-bar {
+    transform: rotate(45deg) translateY(-5px);
+  }
+}
+
+@keyframes movearrowright {
+  0% {
+    transform: translateX(0);
+  }
+  90% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes movearrowleft {
+  0% {
+    transform: translateX(0);
+  }
+  90% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
